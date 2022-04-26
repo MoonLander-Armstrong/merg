@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root to: "courses#index"
   devise_for :users
-  get '/', to: redirect('/users/sign_up')
+
+  resources :course
+
+  
 end
