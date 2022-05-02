@@ -1,0 +1,12 @@
+<h1>編輯Chapter</h1>
+
+<%= render "shared/flash" %>
+
+<%= form_with model: @chapter, url: owner_chapter_path do |form| %>
+  <div class="field">
+    <%= form.label :title, "標題" %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <%= form.submit %>
+<% end %>
